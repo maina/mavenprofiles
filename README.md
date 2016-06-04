@@ -6,9 +6,11 @@ will vary most of the times e.g when in dev mode your db URL will most likely be
 could be the db data which is cleaned up before and after tests execution.
 </br></br>Keeping in mind the fact that app constants that change based on the build environment should be saved in the .properties files,
 and dynamically injected (filtered) in the app resource files, (in this case am referring to a spring framework app) having maven profiles
-simplifies this task in that passing <b> "-P <profile>" <b> to the build command automatically sets the right params.
+simplifies this task in that passing <b> "-P profile" </b> to the build command automatically sets the right params.
 
 
 <b>Building the project</b></br></br>
 mvn clean compile -P test </br></br>
-Use -P option to set the current build profile. By default dev profile is active.
+Use -P option to set the current build profile. </br>
+By default dev profile is active. This ensures that at all times any build that doesn't specify the profile to use executes,
+it runs on dev properties including tests.
