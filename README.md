@@ -6,7 +6,7 @@ will vary most of the times e.g when in dev mode your db URL will most likely be
 could be the db data which is cleaned up before and after tests execution.
 </br></br>Keeping in mind the fact that app constants that change based on the build environment should be saved in the .properties files,
 and dynamically injected (filtered) in the app resource files, (in this case am referring to a spring framework app) having maven profiles
-simplifies this task in that passing -P <profile> to the build command automatically sets the right params and seamlessly. 
+simplifies this task in that passing <b> "-P <profile>" <b> to the build command automatically sets the right params.
 
 
 <b>Building the project</b></br></br>
